@@ -1,0 +1,99 @@
+<div class="main-container">
+    <div class="px-4 py-4">
+      <div class="min-height-200px">
+        <div class="container p-0 ">
+          <div class="jumbotron mb-3 ">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div class="d-flex justify-content-between">
+                  <div class=" pull-left">
+                    <div class="title text-dark">
+                      <h4>Detail Contact</h4>
+                    </div>
+                    <nav aria-label="breadcrumb" role="navigation">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a [routerLink]="['/']" routerLinkActive="active">Contact</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Detail</li>
+                        </ol>
+                      </nav>
+                  </div>
+                  <button type="button" class="btn btn-primary" [routerLink]="['/']" routerLinkActive="active"> 
+                    <a style="text-decoration: none;color: inherit;" >Back</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-20 card-box text-dark">
+        <div class="clearfix">
+          <div class="pull-left">
+            <h4 class="text-blue ">Detail Contact</h4>
+          </div>
+        </div>
+        <form [hidden]="editMode" (ngSubmit)="onSubmit()" id="ngForm" #kontakForm="ngForm">
+          <div class="form-group row">
+            <label class="col-sm-12 col-md-2 col-form-label">Name</label>
+            <div class="col-sm-12 col-md-10">
+                                <p type="text">{{developer.name}}</p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-12 col-md-2 col-form-label">Skill</label>
+            <div class="col-sm-12 col-md-10">
+                                <p>{{developer.skill}}</p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-12 col-md-2 col-form-label">Phone</label>
+            <div class="col-sm-12 col-md-10">
+                                <p>{{developer.phone}}</p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-12 col-md-2 col-form-label">Notes</label>
+            <div class="col-sm-12 col-md-10">
+                                <p>{{developer.notes}}</p>
+            </div>
+          </div>
+          <button [hidden]="editMode" class="btn btn-primary" (click)="toEditMode()">
+            <a style="text-decoration: none;color: inherit;" >Edit</a>
+          </button>
+        </form>
+        <form [hidden]="!editMode" (ngSubmit)="onSubmit()" id="ngForm" #kontakForm="ngForm">
+          <div class="form-group row">
+            <label class="col-sm-12 col-md-2 col-form-label">Name</label>
+            <div class="col-sm-12 col-md-10">
+                <input class="form-control" type="text" placeholder="Jhonny Brown" required [(ngModel)]="developerModelUpd.name" 
+                name="name" >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-12 col-md-2 col-form-label">Skill</label>
+            <div class="col-sm-12 col-md-10">
+                <input class="form-control" type="text" placeholder="Angular developer, java spring boot developer, scrum master"
+                required [(ngModel)]="developerModelUpd.skill" name="skill">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-12 col-md-2 col-form-label">Phone</label>
+            <div class="col-sm-12 col-md-10">
+                <input class="form-control" type="text" placeholder="phone number max 8 digits, with formatted"
+                required [(ngModel)]="developerModelUpd.phone" name="phone">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-12 col-md-2 col-form-label">Notes</label>
+            <div class="col-sm-12 col-md-10">
+                <input class="form-control" type="text" placeholder="Notes/ Description - String"
+                required [(ngModel)]="developerModelUpd.notes" name="notes">
+            </div>
+          </div>
+        <button [hidden]="!editMode" class="btn btn-primary" (click)="toViewMode()">
+          <a style="text-decoration: none;color: inherit;" >Submit</a>
+        </button>
+        </form>
+      </div>
+    </div>
+</div>

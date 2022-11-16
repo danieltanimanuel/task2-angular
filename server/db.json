@@ -1,0 +1,39 @@
+{
+  "freelancers": [
+    {
+      "id": 1,
+      "name": "Murphy",
+      "phone": "25565115",
+      "skill": "Angular Developer",
+      "notes": "he has quality to build angular application"
+    },
+    {
+      "id": 2,
+      "name": "Eddie",
+      "phone": "25565115",
+      "skill": "Devops Engineer",
+      "notes": "he has quality to maintain production environment"
+    },
+    {
+      "id": 3,
+      "name": "Daniel 2",
+      "skill": "Java Spring Boot, Angular",
+      "phone": "081382816303",
+      "notes": "Jago banget bosq 2"
+    },
+    {
+      "id": 6,
+      "name": "Richarda",
+      "phone": "25565115",
+      "skill": "React Developer",
+      "notes": "he has quality to build react application"
+    },
+    {
+      "name": "Daniel",
+      "skill": "Java Spring Boot, Angular",
+      "phone": "081382816303",
+      "notes": "Jago banget bosq",
+      "id": 7
+    }
+  ]
+}
